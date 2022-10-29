@@ -3,11 +3,32 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import HelloArrowComponent from './component/HelloArrowComponent';
+// import HalloStatefullComponent from './container/HalloStatefullComponent';
+// import YouTubeComp from './component/YouTubeComp/YouTubeComp';
+import Home from './container/Home/Home';
+
+// // make function component
+// function HelloComponent() {
+//   return <p>Ini Dari HelloComponet</p>
+// };
+
+// // make arrow functions /statless component
+// const HelloArrowComponent = () => {
+//   return <p>Ini Dari HelloArrowComponent</p>
+// };
+
+// // make class component
+// class HalloStatfullComponent extends React.Component {
+//   render() {
+//     return <p>Ini Dari HalloStatfullComponent</p>
+//   }
+// };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Home />
   </React.StrictMode>
 );
 
