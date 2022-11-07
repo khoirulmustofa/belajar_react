@@ -1,13 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-// import App from './App';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ReactRouter from './container/ReactRouter/ReactRouter';
-// import HelloArrowComponent from './component/HelloArrowComponent';
-// import HalloStatefullComponent from './container/HalloStatefullComponent';
-// import YouTubeComp from './component/YouTubeComp/YouTubeComp';
-// import Home from './container/Home/Home';
+
 
 
 // // make function component
@@ -30,7 +25,7 @@ import ReactRouter from './container/ReactRouter/ReactRouter';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ReactRouter />
+    <App />
   </React.StrictMode>
 );
 
