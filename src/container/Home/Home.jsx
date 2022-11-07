@@ -1,11 +1,28 @@
-import React from 'react';
-import YouTubeComp from '../../component/YouTubeComp/YouTubeComp';
+import React, { Component} from 'react';
+import BlogPost from '../BlogPost/BlogPost';
+// import YouTubeComp from '../../component/YouTubeComp/YouTubeComp';
+import LifeCycleComp from '../LifeCycleComp/LifeCycleComp';
 import Product from '../Product/Product';
+import {
+    BrowserRouter as Router, Route, Link
+} from "react-router-dom";
 
 class Home extends React.Component {
+    state = {
+        showComponents: true,
+    }
+
+    // componentDidMount() {
+    //     setTimeout(() => {
+    //         this.setState({ showComponents: false });
+    //     }, 8000)
+    // }
+
     render() {
         return (
-            <div>
+            <BrowserRouter>
+
+                {/* <div>
                 <YouTubeComp
                     time="01.01"
                     title="Belajar React JS Bagian 1"
@@ -25,7 +42,28 @@ class Home extends React.Component {
                 <YouTubeComp />
                 <hr />
                 <Product />
-            </div>
+
+                <hr />
+                <p>LifeCycleComp</p>
+                {
+                    this.state.showComponents ?
+                        <LifeCycleComp /> :
+                        null
+                }
+
+                <p>Blog Post</p>
+                <hr />
+                <BlogPost />
+            </div> */}
+                <Fragment>
+                    
+                        <Route path='/' exact component={BlogPost} />
+                        <Route path='/product' component={Product} />
+                        <Route path='/lifecycle' component={LifeCycleComp} />
+
+                </Fragment>
+
+            </BrowserRouter>
         )
     }
 };

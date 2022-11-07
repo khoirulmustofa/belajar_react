@@ -1,33 +1,26 @@
 import React, { Component, Fragment } from 'react';
+import CardProduct from '../CardProduct/CardProduct';
 
 class Product extends Component {
     state = {
         keranjang: 5
     }
 
-    btnMinus = () => {
-        if (this.state.keranjang > 0) {
-            this.setState({
-                keranjang: this.state.keranjang - 1
-            });
-        }
-    };
-
-    btnPlus = () => {
+    handleKeranjangChange = (newValue) => {
         this.setState({
-            keranjang: this.state.keranjang + 1
+            keranjang: newValue
         });
     };
+    
+
     render() {
         return (
             <Fragment>
                 <p>Bagian Keranjang</p>
                 <div className="keranjang">{this.state.keranjang}</div>
                 <hr />
-                <p>Bagian Button</p>
-                <button onClick={this.btnMinus}> - (Minus)</button>
-                <input type="text" value={this.state.keranjang} />
-                <button onClick={this.btnPlus}> + (Plus)</button>
+                {/* value mendapat nilai dari anak lemparan props onKeranjangChange */}
+                <CardProduct onKeranjangChange={(value) => this.handleKeranjangChange(value)} />
             </Fragment>
         );
     }

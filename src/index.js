@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ReactRouter from './container/ReactRouter/ReactRouter';
 // import HelloArrowComponent from './component/HelloArrowComponent';
 // import HalloStatefullComponent from './container/HalloStatefullComponent';
 // import YouTubeComp from './component/YouTubeComp/YouTubeComp';
-import Home from './container/Home/Home';
+// import Home from './container/Home/Home';
+
 
 // // make function component
 // function HelloComponent() {
@@ -28,7 +30,7 @@ import Home from './container/Home/Home';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home />
+    <ReactRouter />
   </React.StrictMode>
 );
 
