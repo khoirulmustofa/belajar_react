@@ -1,9 +1,12 @@
 import React from 'react';
+import './button.css';
 
-const ButtonFunctional = () => {
+const ButtonFunctional = (props) => {
      return (
         <div>
-            <button>Button Fuction</button>
+            <button className='bg-slate-200 py-2 px-4 rounded'>Button Fuction</button>
+            <br />
+            <button className='bg-slate-200 py-2 px-4 rounded'>{props.text}</button>
         </div>
      );
 };

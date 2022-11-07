@@ -4,9 +4,12 @@ import ButtonFunctional from "./components/ButtonFunctional";
 
 function App() {
   return (
-    <div className="App">
-      <ButtonClass />
-      <ButtonFunctional />
+    <div
+      className="App"
+      style={{ display: "flex", flexDirection: "row", gap: "0.5em" }}
+    >
+      <ButtonClass text="Button Class Dari Props"/>
+      <ButtonFunctional text="Button Functional Dari Props" />
     </div>
   );
 }
